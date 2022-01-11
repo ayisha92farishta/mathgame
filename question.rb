@@ -6,29 +6,17 @@ class Question
   end
 
   def ask
-    puts "What is the sum of #{@num1} and #{@num2}?"
+    "What is the sum of #{@num1} and #{@num2}?"
   end
 
   def right_answer(ans)
     if ans === @num1 + @num2
-      p "Right answer"
+      return true
     else
-      p "Sorry wrong answer"
+      return false
     end
   end
 end
 
 
-question = Question.new
 
-question.ask
-
-answer = gets.chomp.to_i
-
-question.right_answer(answer)
-
-
-
-# answer = gets.chomp
-
-# question.right_answer(gets.chomp)
